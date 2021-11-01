@@ -21,7 +21,7 @@ export const ImageLeftComponent = ({imageData, children, className}: SectionWith
         span: 6,
         offset: 0,
     };
-    return <Row className={`justify-content-md-center ${className}`}>
+    return <Row className={`py-4 justify-content-md-center ${className}`}>
         <Col xs={leftWide} className={'d-lg-flex justify-content-center'}>
             <SectionImageComponent isHero={isHero} src={imageData?.src} alt={imageData?.alt} />
         </Col>

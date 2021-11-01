@@ -4,8 +4,25 @@ import styled from "@emotion/styled";
 import {Container} from "react-bootstrap";
 
 const ContentStyled = styled(ImageRightComponent)`
-  height: 70vh;
+  height: 80vh;
   min-height: 30em;
+
+  a {
+    color: var(--bs-orange);
+  }
+`;
+
+const SectionStyled = styled.section`
+  position: relative;
+
+  ::before {
+    background-size: cover;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+  }
 `;
 
 const FloatingIconBg = styled.img`
@@ -20,19 +37,19 @@ const FloatingIconBg = styled.img`
 `;
 
 export const HeroSection = () => {
-    return <div className={'position-relative'}>
-        <FloatingIconBg src={'/logo_small_orange.svg'} />
+    return <SectionStyled className={'hero position-relative'}>
+        <FloatingIconBg alt={''} role={'presentation'} src={'/logo_small_orange.svg'} />
         <Container>
-            <ContentStyled className={'hero-section align-items-center'} imageData={{src: '/person_sketch.png', alt: 'Sketch of techie-person writing some notes'}} >
-                <h1>Responsive left-aligned hero with image</h1>
+            <ContentStyled className={'content align-items-center'} isHero imageData={{src: '/person_sketch.png', alt: 'Sketch of techie-person writing some notes'}} >
+                <h1>CODE FOR ORLANDO</h1>
 
                 <p>
-                    Meeting with local developers (or anyone interested in web development) is an essential part of
-                    what makes us special. We cherish community, and enjoy fostering a unique culture of creatives,
-                    developers and individuals interested in tech. Join us on Meetup for upcoming events and online
-                    meetings.
+                    A brigade of <a rel={'noreferrer'} href={'https://www.codeforamerica.org/'} target={'_blank'}>Code for America</a>{' '}
+                    based in <a rel={'noreferrer'} href={'https://www.orlando.gov'} target={'_blank'}>Orlando, Florida - The City
+                    Beautiful</a>. We are civic techies looking for people of any skill set whose interested to improve
+                    our community and governmental services.
                 </p>
             </ContentStyled>
         </Container>
-    </div>
+    </SectionStyled>
 }

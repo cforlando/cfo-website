@@ -4,4 +4,5 @@ export type SectionWithImage = {
     imageData?: ImageData,
     children?: any;
     className?: string;
+    isHero?: boolean;
 }

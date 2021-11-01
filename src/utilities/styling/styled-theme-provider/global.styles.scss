@@ -1,4 +1,5 @@
 @import './boostrap.bundler';
+@import '../fonts/fonts.utility';
 
 /**
 Global Styling should be kept at a MINIMUM. React and Bootstrap do NOT go well with each other.
@@ -6,21 +7,69 @@ Any additional contributions to this file will only further complicate the issue
  */
 
 @include media-breakpoint-down(md) {
-  .hero-section img {
+  section.hero .content img {
     position: absolute;
     top: 50%;
     transform: translateY(-25%) scaleX(-1) scale(1.5);
     z-index: -1;
-    right: -5em;
+    right: -3em;
   }
 
-  .hide-section-image-md img {
+  section.about-us {
+    height: 70vh;
+  }
+
+  .hide-section-image-md img.section-image {
     display: none;
   }
+
+  .btn-meetup, .btn-get-involved {
+    min-width: 10em;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  section.events {
+    .orange-fruit {
+      border-radius: 0;
+    }
+  }
+
+  section.about-us {
+    height: 90vh;
+  }
+}
+
+
+section.contact img.section-image {
+  min-width: unset;
+  min-height: unset;
+}
+
+// offset to account for fixed header
+section {
+  scroll-margin-top: 30vh;
 }
 
 // Meetup button styles. Note #e51937 -> hsl = hsl(351, 80%, 50%)
 .btn-meetup {
-  @include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 50%));
-  color: var(--bs-white)
+  @include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 30%));
+  //color: var(--bs-white);
 }
+.btn-get-involved {
+  @include button-variant(hsl(30, 92%, 58%), hsl(30, 92%, 38%));
+  //color: var(--bs-white);
+}
+.btn-slack {
+  @include button-variant(hsl(299, 56%, 19%), hsl(299, 36%, 19%));
+  //color: var(--bs-white);
+}
+.btn-eventbrite {
+  @include button-variant(hsl(17, 92%, 57%), hsl(17, 72%, 37%));
+  //color: var(--bs-white);
+}
+
+
+// Fonts
+@include font-face("Lato", "../fonts/Lato/Lato-Bold", $font-weight-bold, null, "ttf")
+@include font-face("Lato", "../fonts/Lato/Lato-Light", $font-weight-light, null, "ttf")
