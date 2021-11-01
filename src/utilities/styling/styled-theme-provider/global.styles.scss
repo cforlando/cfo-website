@@ -1,0 +1,26 @@
+@import './boostrap.bundler';
+
+/**
+Global Styling should be kept at a MINIMUM. React and Bootstrap do NOT go well with each other.
+Any additional contributions to this file will only further complicate the issue.
+ */
+
+@include media-breakpoint-down(md) {
+  .hero-section img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%) scaleX(-1) scale(1.5);
+    z-index: -1;
+    right: -5em;
+  }
+
+  .hide-section-image-md img {
+    display: none;
+  }
+}
+
+// Meetup button styles. Note #e51937 -> hsl = hsl(351, 80%, 50%)
+.btn-meetup {
+  @include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 50%));
+  color: var(--bs-white)
+}
