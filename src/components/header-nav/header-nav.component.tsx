@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {ScrollingLink, useOnScreen} from "../../utilities";
 import _ from 'lodash';
+import {useHistory, withRouter} from 'react-router-dom';
 
 const Toggle = ({label = '', ariaControls, providedRef}: {label?: string; ariaControls: string, providedRef?: RefObject<any>}) => {
     const ref = providedRef ? providedRef : null; // default to a dummy 'null' ref
@@ -16,12 +17,19 @@ const Toggle = ({label = '', ariaControls, providedRef}: {label?: string; ariaCo
     </NavbarToggleStyled>
 }
 
-export const HeaderNavComponent = () => {
+export const HeaderNavComponent = withRouter(() => {
     const [activeKey, setActiveKey] = useState('home');
     const menuToggleRef = useRef(null);
     const isMenuToggleVisible = useOnScreen(menuToggleRef);
+    const history = useHistory();
 
-    const toggleMenu = useCallback(() => {
+    const toggleMenu = useCallback(async (path: string, toAnchor?: string) => {
+        await history?.push({
+            pathname: path,
+            state: {
+                toAnchor: toAnchor ?? '',
+            }
+        });
         if (isMenuToggleVisible && menuToggleRef?.current) {
             (menuToggleRef.current as any).click();
         }
@@ -42,41 +50,33 @@ export const HeaderNavComponent = () => {
                     className="m-auto"
                     activeKey={activeKey}
                     onSelect={(selectedKey) => {
-                        if (selectedKey !== 'external') {
-                            setActiveKey((selectedKey ?? ''))
-                        }
+                        setActiveKey((selectedKey ?? ''))
                     }}
                     justify
                 >
                     <Nav.Item>
-                        <ScrollingLink onClick={() => toggleMenu()} cssStyles={NavLinkStyles} toAnchor={'home'}>Home</ScrollingLink>
+                        <ScrollingLink onClick={() => toggleMenu('/', 'home')} cssStyles={NavLinkStyles} toAnchor={'home'}>Home</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <ScrollingLink onClick={() => toggleMenu()} cssStyles={NavLinkStyles} toAnchor={'events'}>Events</ScrollingLink>
+                        <ScrollingLink onClick={() => toggleMenu('/', 'events')} cssStyles={NavLinkStyles} toAnchor={'events'}>Events</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <ScrollingLink onClick={() => toggleMenu()} cssStyles={NavLinkStyles} toAnchor={'about'}>About</ScrollingLink>
+                        <ScrollingLink onClick={() => toggleMenu('/', 'about')} cssStyles={NavLinkStyles} toAnchor={'about'}>About</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <ScrollingLink onClick={() => toggleMenu()} cssStyles={NavLinkStyles} toAnchor={'contact'}>Contact</ScrollingLink>
+                        <ScrollingLink onClick={() => toggleMenu('/', 'contact')} cssStyles={NavLinkStyles} toAnchor={'contact'}>Contact</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <ExternalLink
-                            className={'external d-flex justify-content-center'}
+                        <Nav.Link
                             css={NavLinkStyles}
-                            href={'https://github.com/cforlando/codeofconduct'}
-                            rel={'roreferrer'}
-                            target={'_blank'}
                             eventKey={'external'}
+                            onClick={() => toggleMenu('/conduct')}
                         >
-                            <div className={'d-inline-block position-relative'}>
-                                <span>Conduct</span>
-                                <ImageStyled alt={''} role={'presentation'} className={'px-1'} src={'/external-link.svg'} />
-                            </div>
-                        </ExternalLink>
+                            Conduct
+                        </Nav.Link>
                     </Nav.Item>
                 </NavStyled>
             </Navbar.Collapse>
         </Container>
     </NavbarStyled>;
-}
+})

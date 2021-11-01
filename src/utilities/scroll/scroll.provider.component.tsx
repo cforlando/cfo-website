@@ -12,12 +12,12 @@ export type ScrollAnchorContext = {
 
 export const ScrollRegisterContext = React.createContext({} as ScrollAnchorContext);
 
-export const ScrollingAnchor = ({anchorId = '', children}: {anchorId: string, children?: any}) => {
+export const ScrollingAnchor = ({anchorId = '', id, children}: {anchorId: string; id: string; children?: any}) => {
     const ref = useRef(null);
 
     useScrollingAnchor(anchorId, ref);
 
-    return <div ref={ref}>
+    return <div id={id} ref={ref}>
         {children}
     </div>
 };
@@ -41,24 +41,32 @@ export const ScrollingLink = ({toAnchor, children, cssStyles, onClick: callParen
 
     return <Nav.Link css={cssStyles} eventKey={toAnchor} onClick={() => {
 
-        // React-Bootstrap is doing something funky. Asynchronously run provided onClick
-        setTimeout(() => callParentOnClick(), 100);
-
-        const anchorRef: any = _.get(anchorRefs, toAnchor, null)
-
-        try {
-            // maintains browser history
-            window.location.href = `${window.location.protocol}//${window.location.host}#${toAnchor}`;
-
-            anchorRef?.scrollIntoView({
-                behavior: "smooth",
-            });
-        } catch {
-            // do nothing
-        }
+        scrollToAnchor(toAnchor, anchorRefs, callParentOnClick);
     }}>
         {children}
     </Nav.Link>
+}
+
+export const scrollToAnchor = (toAnchor: string, anchorRefs: ScrollRegisterState = {}, callback = _.noop) => {
+
+    // React-Bootstrap is doing something funky. Asynchronously run provided onClick
+    setTimeout(() => callback(), 100);
+
+    let anchorRef: any = _.get(anchorRefs, toAnchor, null);
+
+    if (_.isNil(anchorRef)){
+        anchorRef = document.getElementById(toAnchor);
+    }
+
+    try {
+        // window.location.href = `${window.location.protocol}//${window.location.host}#${toAnchor}`; // maintains browser history
+
+        anchorRef?.scrollIntoView({
+            behavior: "smooth",
+        });
+    } catch {
+        // do nothing
+    }
 }
 
 export const ScrollingProvider = ({children}: {children: any}) => {
