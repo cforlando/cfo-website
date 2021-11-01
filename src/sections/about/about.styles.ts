@@ -19,3 +19,7 @@ export const BgWatermark = styled.img`
   transform: translateX(-50%);
   opacity: 0.2;
 `;
+
+export const SectionStyled = styled.section`
+  height: 70vh;
+`;

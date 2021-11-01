@@ -36,16 +36,3 @@ export const LogoStyled = styled.img`
   max-height: 100%;
   width: auto;
 `;
-
-export const ImageStyled = styled.img`
-  width: 1.8em;
-  height: 1.8em;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-`;
-
-export const ExternalLink = styled(Nav.Link)`
-  font-weight: 700;
-`;

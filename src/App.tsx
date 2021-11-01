@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import './utilities/styling/styled-theme-provider/global.styles.scss';
 import {StyledComponentsProvider, ScrollingProvider, ScrollingAnchor} from './utilities';
 import {HomePage} from './pages';
