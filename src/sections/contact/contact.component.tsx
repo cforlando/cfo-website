@@ -1,24 +1,14 @@
 import React, {useRef} from 'react';
 import {SectionImageComponent} from "../../components";
-import styled from "@emotion/styled";
 import {Col, Container, Row} from "react-bootstrap";
 import {useScrollingAnchor} from "../../utilities";
-
-const ContentStyled = styled(Row)`
-  height: 50vh;
-  min-height: 30em;
-`;
-
-const SectionStyled = styled.section`
-  color: var(--bs-white);
-  background-color: var(--bs-primary);
-`;
+import {ContentStyled, SectionStyled} from "./contact.styles";
 
 export const ContactSection = () => {
     const ref = useRef(null);
     useScrollingAnchor('contact', ref);
 
-    return <SectionStyled className={'contact'} ref={ref}>
+    return <SectionStyled id={'contact'} className={'contact'} ref={ref}>
         <Container>
             <ContentStyled className={'content justify-content-md-center align-content-center align-content-md-unset align-items-center'}>
                 <Col
