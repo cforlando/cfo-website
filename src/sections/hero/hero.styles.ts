@@ -11,7 +11,9 @@ export const ContentStyled = styled(ImageRightComponent)`
 `;
 
 export const SectionStyled = styled.section`
-  position: relative;
+  background: rgb(230,237,255);
+  background: linear-gradient(0deg, rgba(230,237,255,1) 15%, rgba(255,255,255,1) 45%);
+  z-index: -3;
 
   ::before {
     background-size: cover;

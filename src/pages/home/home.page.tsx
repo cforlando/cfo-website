@@ -3,6 +3,7 @@ import {AboutSection, ContactSection, EventsSection, HeroSection} from "../../se
 import {scrollToAnchor} from "../../utilities";
 import {useHistory} from "react-router-dom";
 import _ from 'lodash';
+import {PartnersComponent} from "../../sections/partners";
 
 export const HomePage = () => {
     const history = useHistory<{ toAnchor: string | undefined }>();
@@ -19,12 +20,13 @@ export const HomePage = () => {
         if(_.isString(toAnchor)){
             scrollToAnchor(toAnchor)
         }
-    }, [scrollToAnchor, toAnchor]);
+    }, [toAnchor]);
 
     return <div>
         <HeroSection/>
         <EventsSection/>
         <AboutSection/>
+        <PartnersComponent />
         <ContactSection/>
     </div>
 }

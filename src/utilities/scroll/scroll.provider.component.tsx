@@ -54,7 +54,7 @@ export const scrollToAnchor = (toAnchor: string, anchorRefs: ScrollRegisterState
 
     let anchorRef: any = _.get(anchorRefs, toAnchor, null);
 
-    if (_.isNil(anchorRef)){
+    if (_.isNil(anchorRef) && _.isString(toAnchor) && !_.isEmpty(toAnchor)){
         anchorRef = document.getElementById(toAnchor);
     }
 

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import {Container, Nav, Navbar} from "react-bootstrap";
 import React, {RefObject, useCallback, useRef, useState} from "react";
-import {LogoStyled, NavbarToggleStyled, NavStyled, NavLinkStyles, NavbarStyled, ImageStyled, ExternalLink} from './header-nav.styles';
+import {LogoStyled, NavbarToggleStyled, NavStyled, NavLinkStyles, NavbarStyled} from './header-nav.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {ScrollingLink, useOnScreen} from "../../utilities";
@@ -33,7 +33,7 @@ export const HeaderNavComponent = withRouter(() => {
         if (isMenuToggleVisible && menuToggleRef?.current) {
             (menuToggleRef.current as any).click();
         }
-    }, [isMenuToggleVisible, menuToggleRef]);
+    }, [isMenuToggleVisible, menuToggleRef, history]);
 
     return <NavbarStyled sticky="top" bg="primary" expand="lg">
         <Container>

@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import {SectionImageComponent} from "../../components";
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Container} from "react-bootstrap";
 import {useScrollingAnchor} from "../../utilities";
 import {ContentStyled, SectionStyled} from "./contact.styles";
 
