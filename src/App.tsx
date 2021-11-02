@@ -3,6 +3,7 @@ import './utilities/styling/styled-theme-provider/global.styles.scss';
 import {StyledComponentsProvider, ScrollingProvider, ScrollingAnchor} from './utilities';
 import {HomePage} from './pages';
 import {HeaderNavComponent} from "./components/header-nav";
+import {FooterComponent} from "./sections/footer";
 
 /**
  * Currently a Single Page App (SPA) that has a few sections
@@ -15,6 +16,7 @@ function App() {
                 <ScrollingAnchor anchorId={'home'} /> {/* clever way to get around local anchor linking */}
                 <HeaderNavComponent />
                 <HomePage />
+                <FooterComponent />
             </ScrollingProvider>
         </StyledComponentsProvider>
     );

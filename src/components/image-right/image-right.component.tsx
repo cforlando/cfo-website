@@ -2,10 +2,8 @@ import React from 'react';
 import {Row, Col} from "react-bootstrap";
 import {SectionImageComponent} from "../section-image";
 import {SectionWithImage} from "../common";
-import _ from 'lodash';
 
-export const ImageRightComponent = ({imageData, children, className}: SectionWithImage) => {
-    const isHero = _.toLower(className)?.indexOf('hero') >= 0;
+export const ImageRightComponent = ({imageData, children, className, isHero = false}: SectionWithImage) => {
     const leftWide = {
         span: 6,
         offset: 0,
@@ -21,7 +19,7 @@ export const ImageRightComponent = ({imageData, children, className}: SectionWit
         span: 6,
         offset: 0,
     };
-    return <Row className={`position-relative justify-content-md-center ${className}`}>
+    return <Row className={`py-4 position-relative justify-content-md-center ${className}`}>
         <Col
             md={leftWide}
             sm={leftNarrow}

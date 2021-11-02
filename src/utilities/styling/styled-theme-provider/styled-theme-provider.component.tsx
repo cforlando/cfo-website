@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {ThemeProvider, Global, css, SerializedStyles} from '@emotion/react';
 import _ from 'lodash';
 import {ThemeColorsContext, ColorThemeProvider, ColorThemeState} from "../colors";
@@ -57,16 +57,13 @@ const ThemeProviderWithColorTheme = ({children}: {children: any}) => {
     const [theme, setStyledComponentsTheme] = useState({...BaseTheme, colors} as StyledComponentTheme);
     const [cssVariables, setCssVariables] = useState(css`` as SerializedStyles);
 
-    const globalStyles = useMemo(() => {
-        return css``;
-    }, [cssVariables])
-
     const {colors: styledThemeColors} = theme;
 
+    // initial color registration
     useEffect(() => {
         const _cssVariables = buildCssVariables(colors);
         setCssVariables(_cssVariables)
-    }, [])
+    }, [colors])
 
     // update the @emotion/styled colors when our color theme changes
     useEffect(() => {
