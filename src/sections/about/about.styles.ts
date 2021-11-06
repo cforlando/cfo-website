@@ -22,4 +22,21 @@ export const BgWatermark = styled.img`
 
 export const SectionStyled = styled.section`
   height: 70vh;
+  margin-top: 30vh;
+`;
+
+export const BgImage = styled.img`
+  position: absolute;
+  width: 250%;
+  left: -35%;
+  top: 50%;
+  transform: translateY(-60%);
+  z-index: -1;
+`;
+
+export const BgImageLg = styled.img`
+  position: absolute;
+  width: 130%;
+  left: -15%;
+  top: -60%;
 `;

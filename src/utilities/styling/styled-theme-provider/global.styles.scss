@@ -49,19 +49,23 @@ section {
 
 // Meetup button styles. Note #e51937 -> hsl = hsl(351, 80%, 50%)
 .btn-meetup {
-  @include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 30%));
+  //@include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 30%));
+  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
   //color: var(--bs-white);
 }
 .btn-get-involved {
-  @include button-variant(hsl(30, 92%, 58%), hsl(30, 92%, 38%));
+  //@include button-variant(hsl(30, 92%, 58%), hsl(30, 92%, 38%));
+  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
   //color: var(--bs-white);
 }
 .btn-slack {
-  @include button-variant(hsl(299, 56%, 19%), hsl(299, 36%, 19%));
+  //@include button-variant(hsl(299, 56%, 19%), hsl(299, 36%, 19%));
+  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
   //color: var(--bs-white);
 }
 .btn-eventbrite {
-  @include button-variant(hsl(17, 92%, 57%), hsl(17, 72%, 37%));
+  //@include button-variant(hsl(17, 92%, 57%), hsl(17, 72%, 37%));
+  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
   //color: var(--bs-white);
 }
 

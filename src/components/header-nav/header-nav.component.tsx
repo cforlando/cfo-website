@@ -1,7 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import {Container, Nav, Navbar} from "react-bootstrap";
 import React, {RefObject, useCallback, useRef, useState} from "react";
-import {LogoStyled, NavbarToggleStyled, NavStyled, NavLinkStyles, NavbarStyled} from './header-nav.styles';
+import {
+    LogoStyled,
+    NavbarToggleStyled,
+    NavStyled,
+    NavLinkStyles,
+    NavbarStyled,
+    BottomNavBarDetail,
+} from './header-nav.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {ScrollingLink, useOnScreen} from "../../utilities";
@@ -78,5 +85,6 @@ export const HeaderNavComponent = withRouter(() => {
                 </NavStyled>
             </Navbar.Collapse>
         </Container>
+        <BottomNavBarDetail className={'position-absolute'} />
     </NavbarStyled>;
 })
