@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import {ImageLeftComponent} from "../../components";
+import {ImageTextComponent} from "../../components";
 import {Button} from "react-bootstrap";
 
-export const ContentStyled = styled(ImageLeftComponent)`
+export const ContentStyled = styled(ImageTextComponent)`
   height: 50vh;
   min-height: 30em;
   position: relative;

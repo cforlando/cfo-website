@@ -1,5 +1,4 @@
 export * from './header-nav';
-export * from './image-left';
-export * from './image-right';
+export * from './image-text';
 export * from './section-image';
 export * from './common';

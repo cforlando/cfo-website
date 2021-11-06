@@ -1,8 +1,9 @@
 import {ImageData} from './section-image';
 
 export type SectionWithImage = {
-    imageData?: ImageData,
+    imageData: ImageData,
     children?: any;
     className?: string;
     isHero?: boolean;
+    background?: string;
 }

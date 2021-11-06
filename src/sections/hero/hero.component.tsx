@@ -1,12 +1,21 @@
 import React from 'react';
 import {Container} from "react-bootstrap";
-import {SectionStyled, FloatingIconBg, ContentStyled, AnchorStyled} from "./hero.styles";
+import {SectionStyled, ContentStyled, AnchorStyled} from "./hero.styles";
 
 export const HeroSection = () => {
     return <SectionStyled id={'hero'} className={'hero position-relative'}>
-        <FloatingIconBg alt={''} role={'presentation'} src={'/logo_small_orange.svg'} />
-        <Container>
-            <ContentStyled className={'content align-items-center'} isHero imageData={{src: '/person_sketch.png', alt: 'Sketch of techie-person writing some notes'}} >
+        <Container className={'position-relative'}>
+            <ContentStyled className={'content align-items-center'} isHero imageData={
+                {
+                    src: 'http://placekitten.com/260/400',
+                    alt: 'Sketch of techie-person writing some notes',
+                    backgrounds: [
+                        '/orange-blob.svg',
+                        '/blue-blob.svg',
+                        '/green-blob.svg',
+                    ]
+                }
+            } >
                 <h1>CODE FOR ORLANDO</h1>
 
                 <p>
