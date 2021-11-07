@@ -14,7 +14,7 @@ export const EventsSection = () => {
     const ref = useRef(null);
     useScrollingAnchor('events', ref);
 
-    const src = '/calendar.svg';
+    const src = '/events_2.png';
     const alt = 'Calendar symbol';
 
     return <SectionStyled id={'events'} className={'events'} ref={ref}>

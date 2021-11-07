@@ -7,7 +7,7 @@ export const HeroSection = () => {
         <Container className={'position-relative'}>
             <ContentStyled className={'content align-items-center'} isHero imageData={
                 {
-                    src: 'http://placekitten.com/260/400',
+                    src: '/person_sketch.png',
                     alt: 'Sketch of techie-person writing some notes',
                     backgrounds: [
                         '/orange-blob.svg',

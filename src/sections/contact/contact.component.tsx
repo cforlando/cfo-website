@@ -25,7 +25,7 @@ export const ContactSection = () => {
                         span: 8,
                     }}
                     className={'d-flex justify-content-center mt-xs-4 mt-md-0'}>
-                    <ImageStyled src={'http://placekitten.com/250/230'} alt={'Opened mail envelope with script symbol inside the flap'} />
+                    <ImageStyled src={'/contact.png'} alt={'Opened mail envelope with script symbol inside the flap'} />
                 </Col>
                 <Col
                     lg={6}

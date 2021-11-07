@@ -12,14 +12,10 @@ function creatExternalLink(props: any) {
 }
 
 const defaultProfileImageOrder = [
-    'http://placekitten.com/530/301',
-    'http://placekitten.com/530/302',
-    'http://placekitten.com/530/303',
-    'http://placekitten.com/530/304',
-    // '/profile_standout_1.png',
-    // '/profile_standout_2.png',
-    // '/profile_standout_3.png',
-    // '/profile_standout_4.png',
+    '/CFO_img1_2.png',
+    '/CFO_img2_2.png',
+    '/CFO_img3_2.png',
+    '/CFO_img4_2.png',
 ]
 
 export const ConductPage = () => {
