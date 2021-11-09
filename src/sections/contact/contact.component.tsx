@@ -14,7 +14,7 @@ export const ContactSection = () => {
                 <Col
                     lg={{
                         offset: 0,
-                        span: 6,
+                        span: 3,
                     }}
                     md={{
                         offset: 0,
@@ -24,11 +24,11 @@ export const ContactSection = () => {
                         offset: 2,
                         span: 8,
                     }}
-                    className={'d-flex justify-content-center mt-xs-4 mt-md-0'}>
+                    className={'d-none d-lg-flex justify-content-center mt-xs-4 mt-md-0'}>
                     <ImageStyled src={'/contact.png'} alt={'Opened mail envelope with script symbol inside the flap'} />
                 </Col>
                 <Col
-                    lg={6}
+                    lg={3}
                     md={12}
                     className={'mt-4 mt-lg-0'}
                 >

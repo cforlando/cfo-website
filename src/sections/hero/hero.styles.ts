@@ -11,7 +11,6 @@ export const ContentStyled = styled(ImageTextComponent)`
 `;
 
 export const SectionStyled = styled.section`
-  background-color: #f4f0e1;
   z-index: -3;
 `;
 

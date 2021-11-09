@@ -71,6 +71,9 @@ export const HeaderNavComponent = withRouter(() => {
                         <ScrollingLink onClick={() => toggleMenu('/', 'about')} cssStyles={NavLinkStyles} toAnchor={'about'}>About</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>
+                        <ScrollingLink onClick={() => toggleMenu('/', 'partners')} cssStyles={NavLinkStyles} toAnchor={'partners'}>Partners</ScrollingLink>
+                    </Nav.Item>
+                    <Nav.Item>
                         <ScrollingLink onClick={() => toggleMenu('/', 'contact')} cssStyles={NavLinkStyles} toAnchor={'contact'}>Contact</ScrollingLink>
                     </Nav.Item>
                     <Nav.Item>

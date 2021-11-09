@@ -6,6 +6,10 @@ Global Styling should be kept at a MINIMUM. React and Bootstrap do NOT go well w
 Any additional contributions to this file will only further complicate the issue.
  */
 
+body {
+  background: var(--bs-body-background);
+}
+
 @include media-breakpoint-down(md) {
   section.hero .content img {
     position: absolute;
@@ -30,10 +34,6 @@ Any additional contributions to this file will only further complicate the issue
       border-radius: 0;
     }
   }
-
-  section.about-us {
-    height: 90vh;
-  }
 }
 
 
@@ -44,29 +44,16 @@ section.contact img.section-image {
 
 // offset to account for fixed header
 section {
-  scroll-margin-top: 30vh;
+  scroll-margin-top: 20vh;
 }
 
 // Meetup button styles. Note #e51937 -> hsl = hsl(351, 80%, 50%)
-.btn-meetup {
-  //@include button-variant(hsl(351, 80%, 50%), hsl(351, 60%, 30%));
+.btn-meetup,
+.btn-get-involved,
+.btn-slack,
+.btn-eventbrite
+{
   @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
-  //color: var(--bs-white);
-}
-.btn-get-involved {
-  //@include button-variant(hsl(30, 92%, 58%), hsl(30, 92%, 38%));
-  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
-  //color: var(--bs-white);
-}
-.btn-slack {
-  //@include button-variant(hsl(299, 56%, 19%), hsl(299, 36%, 19%));
-  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
-  //color: var(--bs-white);
-}
-.btn-eventbrite {
-  //@include button-variant(hsl(17, 92%, 57%), hsl(17, 72%, 37%));
-  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
-  //color: var(--bs-white);
 }
 
 
