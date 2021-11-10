@@ -28,7 +28,9 @@ export const ConductPage = () => {
 
     // scroll to top when loaded
     useEffect(() => {
-        scrollToAnchor('home');
+        setTimeout(() => {
+            scrollToAnchor('home');
+        }, 50)
     }, []);
 
     const renderedProfileImages = useMemo(() => {

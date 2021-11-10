@@ -1,20 +1,14 @@
 import styled from "@emotion/styled";
-import {ImageTextComponent} from "../../components";
 import {Button} from "react-bootstrap";
 
-export const ContentStyled = styled(ImageTextComponent)`
-  height: 50vh;
-  min-height: 30em;
-  position: relative;
-  z-index: 1;
-  color: var(--bs-secondary);
-`;
-
 export const SectionStyled = styled.section`
+  min-height: 50vh;
   color: var(--bs-white);
   z-index: 1;
   position: relative;
-  margin-bottom: 5em;
+  margin-bottom: 4em;
+  background: transparent;
+  background: linear-gradient(0deg, rgba(151,176,242,1) 0%, rgba(151,176,242,1) 49%, rgba(151,176,242,0) 50%, rgba(151,176,242,0) 100%);
 `;
 
 export const SectionBg = styled.div`

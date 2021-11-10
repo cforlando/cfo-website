@@ -4,6 +4,11 @@ import {Row} from "react-bootstrap";
 export const ContentStyled = styled(Row)`
   height: 50vh;
   min-height: 30em;
+  
+  img {
+    max-height: 10em;
+    width: auto;
+  }
 `;
 
 export const SectionStyled = styled.section`

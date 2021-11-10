@@ -17,7 +17,7 @@ export const EventsSection = () => {
     const src = '/events_2.png';
     const alt = 'Calendar symbol';
 
-    return <SectionStyled id={'events'} className={'events'} ref={ref}>
+    return <SectionStyled id={'events'} className={'events d-flex align-items-center'} ref={ref}>
         <SectionBg className={'orange-fruit'} />
         <FloatingLeaf alt={''} role={'presentation'} className={'d-lg-none'} src={'/leaf.svg'} />
         <Container>
@@ -39,10 +39,10 @@ export const EventsSection = () => {
 
                     <div className={"position-relative my-4 d-flex flex-wrap justify-content-center"}>
                         <ButtonStyled className={'d-flex my-3 align-items-center mx-3'} variant="meetup" size="lg" href={'https://www.meetup.com/Code-For-Orlando'} target={'_blank'}>
-                            <ButtonImage alt={''} role={'presentation'} src={'/meetup.svg'} width={40} height={40} /><span className={'px-2'}>Meetup</span>
+                            <ButtonImage alt={''} role={'presentation'} src={'/meetup-color.svg'} width={40} height={40} /><span className={'px-2'}>Meetup</span>
                         </ButtonStyled>
                         <ButtonStyled className={'d-flex my-3 align-items-center mx-3'} variant="eventbrite" size="lg" href={'https://www.eventbrite.com/o/code-for-orlando-33511214869'} target={'_blank'}>
-                            <ButtonImage alt={''} role={'presentation'} src={'/eventbrite.svg'} width={40} height={40} /><span className={'px-2'}>Eventbrite</span>
+                            <ButtonImage alt={''} role={'presentation'} src={'/eventbrite-color.svg'} width={40} height={40} /><span className={'px-2'}>Eventbrite</span>
                         </ButtonStyled>
                         <ButtonStyled className={'d-flex my-3 align-items-center mx-3'} variant="get-involved" size="lg" href={'https://docs.google.com/forms/d/e/1FAIpQLSdb15ewHn06IMLzaWPrqqrEsfh7Xso2A5N4OIkHDpYJ7Z2ajA/viewform'} target={'_blank'}>
                             <ButtonImage alt={''} role={'presentation'} src={'/logo_small_orange.svg'} width={40} height={40} /><span className={'px-2'}>Get Involved</span>

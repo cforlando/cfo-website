@@ -22,19 +22,19 @@ export const MarkDownContainerStyled = styled(Container)`
     
     &:nth-of-type(4n - 3):before{
       content: '';
-      background-color: #006152;
+      background-color: var(--bs-color-highlight-1);
     }
     &:nth-of-type(4n - 2):before{
       content: '';
-      background-color: #f7b334;
+      background-color: var(--bs-color-highlight-2);
     }
     &:nth-of-type(4n - 1):before{
       content: '';
-      background-color: #97b0f2;
+      background-color: var(--bs-color-highlight-3);
     }
     &:nth-of-type(4n):before{
       content: '';
-      background-color: #333333;
+      background-color: var(--bs-color-highlight-4);
     }
   }
   
