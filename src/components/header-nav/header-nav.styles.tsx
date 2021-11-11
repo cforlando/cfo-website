@@ -20,10 +20,8 @@ export const NavStyled = styled(Nav)`
 export const NavLinkStyles = css`
   text-transform: uppercase;
   user-select: none;
+  font-weight: 400;
   
-  :not(.external) {
-    font-weight: 500;
-  }
   :not(.active) {
     color: var(--bs-gray-100) !important;
   }

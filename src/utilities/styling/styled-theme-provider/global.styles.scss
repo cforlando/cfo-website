@@ -59,4 +59,5 @@ section {
 
 // Fonts
 @include font-face("Lato", "../fonts/Lato/Lato-Bold", $font-weight-bold, null, "ttf")
+@include font-face("Lato", "../fonts/Lato/Lato-Regular", $font-weight-normal, null, "ttf")
 @include font-face("Lato", "../fonts/Lato/Lato-Light", $font-weight-light, null, "ttf")

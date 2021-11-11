@@ -8,7 +8,6 @@ export const ImageStyled = styled.img`
 `;
 
 export type ImageData = {
-    direction?: 'right' | 'left';
     src?: string;
     alt?: string;
     backgrounds?: string[];
