@@ -26,6 +26,10 @@ body {
   .btn-meetup, .btn-get-involved {
     min-width: 10em;
   }
+
+  section#about {
+    height: 50vh;
+  }
 }
 
 @include media-breakpoint-up(md) {
@@ -53,11 +57,11 @@ section {
 .btn-slack,
 .btn-eventbrite
 {
-  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%));
+  @include button-variant(hsl(47, 46.3%, 92%), hsl(47, 46.3%, 92%), color-contrast(hsl(47, 46.3%, 92%)));
 }
 
 
 // Fonts
-@include font-face("Lato", "../fonts/Lato/Lato-Bold", $font-weight-bold, null, "ttf")
-@include font-face("Lato", "../fonts/Lato/Lato-Regular", $font-weight-normal, null, "ttf")
-@include font-face("Lato", "../fonts/Lato/Lato-Light", $font-weight-light, null, "ttf")
+@include font-face("Lato", "../fonts/Lato/Lato-Bold", $font-weight-bold, null, "ttf");
+@include font-face("Lato", "../fonts/Lato/Lato-Regular", $font-weight-normal, null, "ttf");
+@include font-face("Lato", "../fonts/Lato/Lato-Light", $font-weight-light, null, "ttf");

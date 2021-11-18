@@ -36,6 +36,10 @@ export const LogoStyled = styled.img`
   width: auto;
 `;
 
+export const NavbarBrandStyled = styled(Navbar.Brand)`
+  cursor: pointer;
+`;
+
 const BorderWave = ({className}: {className?: string;}) => <svg className={className} fill={'rgb(243,139,0)'} width="100%" height="100%" viewBox="0 0 3001 111" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <g transform="matrix(1,0,0,1,1000.04,-485.656)">
         <g transform="matrix(-1.49999,-0.00447284,0.00447284,-1.49999,1997.52,1396.1)">

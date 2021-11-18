@@ -6,7 +6,7 @@ import {HeaderNavComponent} from "./components/header-nav";
 import {FooterComponent} from "./sections/footer";
 import {
     BrowserRouter as Router,
-    Switch,
+    Routes,
     Route,
 } from "react-router-dom";
 import {ConductPage} from "./pages/conduct";
@@ -22,14 +22,10 @@ function App() {
                 <ScrollingProvider>
                     <ScrollingAnchor id={'home'} anchorId={'home'} /> {/* clever way to get around local anchor linking */}
                     <HeaderNavComponent />
-                    <Switch> {/* The concept of 'pages' is really for the purpose of having one element in a <Route> */}
-                        <Route path='/' exact={true}>
-                            <HomePage />
-                        </Route>
-                        <Route path='/conduct'>
-                            <ConductPage />
-                        </Route>
-                    </Switch>
+                    <Routes> {/* The concept of 'pages' is really for the purpose of having one element in a <Route> */}
+                        <Route path={'/'} element={<HomePage />} />
+                        <Route path={'/conduct'} element={<ConductPage />} />
+                    </Routes>
                     <FooterComponent />
                 </ScrollingProvider>
             </StyledComponentsProvider>
