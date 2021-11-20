@@ -16,7 +16,6 @@ const BgImage = styled.img`
 
 export const ImageTextComponent = ({
         imageData: {
-            direction = 'right',
             src = '',
             alt = '',
             backgrounds = [],

@@ -24,7 +24,7 @@ export const PartnersComponent = () => {
 
     return <SectionStyled ref={ref} id={'partners'} className={'partners d-flex align-items-start position-relative'}>
         <PartnersContainerStyled>
-            <h2 className={'d-none d-md-block'}>PARTNERS</h2>
+            <h2>PARTNERS</h2>
             <PartnerDescriptionRow>
                 <Col
                     xs={fullWidth}

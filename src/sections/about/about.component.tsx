@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import {useScrollingAnchor} from "../../utilities";
-import {BgImage, SectionStyled} from "./about.styles";
+import {BgImage, BgImageLg, SectionStyled} from "./about.styles";
 
 export const AboutSection = () => {
     const ref = useRef(null);
@@ -16,8 +16,9 @@ export const AboutSection = () => {
         offset: 1,
     };
 
-    return <SectionStyled id={'about'} ref={ref} className={'about-us d-flex align-items-center position-relative'}>
-        <BgImage src={'/ribbons-bg.svg'} />
+    return <SectionStyled id={'about'} ref={ref} className={'about-us d-flex align-items-start position-relative'}>
+        <BgImage className={'bg-image d-block d-lg-none'} src={'/ribbons-bg.svg'} />
+        <BgImageLg className={'d-none d-lg-block'} src={'/ribbons-bg.svg'} />
         <div className={'position-relative flex-grow-1'}>
             <Container>
                 <h2>ABOUT US</h2>

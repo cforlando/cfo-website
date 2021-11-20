@@ -20,10 +20,8 @@ export const NavStyled = styled(Nav)`
 export const NavLinkStyles = css`
   text-transform: uppercase;
   user-select: none;
+  font-weight: 400;
   
-  :not(.external) {
-    font-weight: 500;
-  }
   :not(.active) {
     color: var(--bs-gray-100) !important;
   }
@@ -36,6 +34,10 @@ export const LogoStyled = styled.img`
   height: 4em;
   max-height: 100%;
   width: auto;
+`;
+
+export const NavbarBrandStyled = styled(Navbar.Brand)`
+  cursor: pointer;
 `;
 
 const BorderWave = ({className}: {className?: string;}) => <svg className={className} fill={'rgb(243,139,0)'} width="100%" height="100%" viewBox="0 0 3001 111" version="1.1" xmlns="http://www.w3.org/2000/svg">

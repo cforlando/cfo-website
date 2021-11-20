@@ -11,20 +11,7 @@ export const ContentStyled = styled(ImageTextComponent)`
 `;
 
 export const SectionStyled = styled.section`
-  z-index: -3;
-`;
-
-export const FloatingIconBg = styled.img`
-  position: absolute;
-  max-width: 80vw;
-  height: 90%;
-  right: -3vw;
-  top: -5%;
-  opacity: 0.4;
-  color: var(--bs-white);
-  z-index: -2;
-  mask-image: url('/halftone.svg');
-  mask-mode: luminance;
+  z-index: 1;
 `;
 
 export const AnchorStyled = styled.a`

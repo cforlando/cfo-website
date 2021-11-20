@@ -7,13 +7,13 @@ import {
     NavStyled,
     NavLinkStyles,
     NavbarStyled,
-    BottomNavBarDetail,
+    BottomNavBarDetail, NavbarBrandStyled,
 } from './header-nav.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {ScrollingLink, useOnScreen} from "../../utilities";
 import _ from 'lodash';
-import {useHistory, withRouter} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Toggle = ({label = '', ariaControls, providedRef}: {label?: string; ariaControls: string, providedRef?: RefObject<any>}) => {
     const ref = providedRef ? providedRef : null; // default to a dummy 'null' ref
@@ -24,15 +24,14 @@ const Toggle = ({label = '', ariaControls, providedRef}: {label?: string; ariaCo
     </NavbarToggleStyled>
 }
 
-export const HeaderNavComponent = withRouter(() => {
+export const HeaderNavComponent = () => {
     const [activeKey, setActiveKey] = useState('home');
     const menuToggleRef = useRef(null);
     const isMenuToggleVisible = useOnScreen(menuToggleRef);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const toggleMenu = useCallback(async (path: string, toAnchor?: string) => {
-        await history?.push({
-            pathname: path,
+        await navigate(path, {
             state: {
                 toAnchor: toAnchor ?? '',
             }
@@ -40,17 +39,17 @@ export const HeaderNavComponent = withRouter(() => {
         if (isMenuToggleVisible && menuToggleRef?.current) {
             (menuToggleRef.current as any).click();
         }
-    }, [isMenuToggleVisible, menuToggleRef, history]);
+    }, [isMenuToggleVisible, menuToggleRef, navigate]);
 
     return <NavbarStyled sticky="top" bg="primary" expand="lg">
         <Container>
-            <Navbar.Brand href="#home">
+            <NavbarBrandStyled onClick={() => toggleMenu('/', 'home')}>
                 <LogoStyled
                     alt="Code for Orlando logo - an outline of an orange fruit with html bracket symbols inside"
                     src="/logo.svg"
                     className="d-inline-block align-top"
                 />
-            </Navbar.Brand>
+            </NavbarBrandStyled>
             <Toggle providedRef={menuToggleRef} label={'Simple menu toggle'} ariaControls={'responsive-navbar-nav'} />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <NavStyled
@@ -90,4 +89,4 @@ export const HeaderNavComponent = withRouter(() => {
         </Container>
         <BottomNavBarDetail className={'position-absolute'} />
     </NavbarStyled>;
-})
+};

@@ -54,6 +54,9 @@ $theme-colors-rgb: map-remove($theme-colors-rgb,
 // override font base
 $font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $headings-font-weight: $font-weight-bold;
+$font-size-base: 1.2rem;
+$font-weight-base: 300;
+$btn-hover-bg-tint-amount: 50%;
 
 // Layout & components
 @import "~bootstrap/scss/root";
