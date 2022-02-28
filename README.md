@@ -16,12 +16,17 @@ This repository will hold the code, documentation, and links to resources used f
  - The current [Draft site](https://deploy-preview-14--friendly-brahmagupta-ae0d10.netlify.app/) for comment/update before launch.   
    (At launch, remove this link and replace with the active website link) 
 
-### Resources/Technolgy
+### Resources/Technology
 
-- Framework/templating engine: [Jekyll](https://jekyllrb.com/)
+- Framework/templating engine: [React](https://reactjs.org/)
 - CSS/styling consistency: [Bootstrap](https://getbootstrap.com/)
 - Jira for work flow: [Jira](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=89541892462&campaign=9124878129&creative=415522909140&device=m&keyword=jira&matchtype=e&network=g&placement=&ds_kids=p51241496118&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=EAIaIQobChMI2Zao6-mx8wIVC02GCh39ugUPEAAYAiAAEgJiHfD_BwE&gclsrc=aw.ds)
 - Figma for wire framing: [Figma](https://www.figma.com/)
+
+### Installation & Usage
+Installation - The only requirement for this repo is `yarn`. At the repo root, install all dependencies by running the command `yarn`.
+
+Usage - This repo was created by [Create React App](https://create-react-app.dev/). It is simple to build a production-ready bundle - run the command `yarn build`. Everything needed for the website will be in the new `build` directory. [Netlify](https://www.netlify.com/) bots 'listen' to repo changes and automatically build/deploy when changes are made to the main branch.
  
 ### Site Map
 
