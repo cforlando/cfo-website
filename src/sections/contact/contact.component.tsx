@@ -36,7 +36,7 @@ export const ContactSection = () => {
                         <div className={'d-inline-block'} >
                             <h2>Contact Us</h2>
 
-                            <p>We would love to hear from you! <br/> <a className={'text-secondary'} href={'mailto:hellocfo@gmail.com'}>hellocfo@gmail.com</a></p>
+                            <p>We would love to hear from you! <br/> <a className={'text-secondary'} href={'mailto:hellocfo@gmail.com'}>leadership@codefororlando.com</a></p>
 
                         </div>
                     </div>
