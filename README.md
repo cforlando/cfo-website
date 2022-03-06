@@ -5,7 +5,7 @@ Launch Date: 11/11/2021
 
 ### About
 
-The purpose of the Code for Orlando website is to provide a digital home to communicate with new volunteers, partners, donors and other stakeholders about who the Brigade is, what they offer, and how the community can contribute.
+The purpose of the [Code for Orlando website](https://codefororlando.com) is to provide a digital home to communicate with new volunteers, partners, donors, and other stakeholders about who the Brigade is, what they offer, and how the community can contribute.
 
 This repository will hold the code, documentation, and links to resources used for the website
 
@@ -34,6 +34,7 @@ Usage - This repo was created by [Create React App](https://create-react-app.dev
 
 ### Contributors
 
+- Krystina Ramos, Product Owner
 - Florence Vicil, Product Owner Delegate/ Stakeholder Liaison
 - Anthony Heggin, Volunteer - Project Manager
 - Matthias Klenk, Volunteer - UX design
@@ -44,7 +45,7 @@ Usage - This repo was created by [Create React App](https://create-react-app.dev
 - Solange Ormeno, Volunteer - front end dev
 - Ryan Harrigan, Volunteer - frontend and infrastructure
 - Carrie Mathieu, Volunteer - frontend/backend
-- Frank Perez, Volunteer - Code for Tampa Bay
+- Frank Perez, Volunteer - Code for Tampa Bay Advisor
 - Jacqui Georgi, Volunteer - Documentation
 
 ### License
