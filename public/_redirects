@@ -1,2 +1,3 @@
 # The current Code for Orlando website is a Single Page Application (SPA). Serve the one index.html to all URI requests.
-/* /index.html 200
+/conduct /index.html 200
+/_redirects /index.html 200

@@ -16,6 +16,6 @@ We have a standard approach for merging updates to the `main` branch.
 3) Commit your changes and push to your fork
 4) Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) for the `main` branch in the cfo-website repo
 5) At least one of the other repo owners will need to approve the pull request
-6) When approval is provided, you can merge!
+6) When approval is provided, the author of the PR can merge! We prefer the author of the PR to merge, because sometimes the PR commit changes.
 
 Thank you once again for your work!
